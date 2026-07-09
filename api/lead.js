@@ -15,7 +15,10 @@ export default async function handler(req, res) {
   }
   const lead = body || {};
   const to = process.env.LEAD_TO || 'todd@igniteai.biz';
-  const from = process.env.LEAD_FROM || 'Ignite AI <leads@igniteai.biz>';
+  // Default sender uses Resend's shared onboarding domain so email works
+  // immediately without verifying igniteai.biz. Once the domain is verified in
+  // Resend, set LEAD_FROM to "Ignite AI <leads@igniteai.biz>" for branded email.
+  const from = process.env.LEAD_FROM || 'Ignite AI <onboarding@resend.dev>';
 
   const lines = [
     'New free-book lead from igniteai.biz',
