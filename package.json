@@ -1,0 +1,10 @@
+{
+  "name": "igniteai-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ignite AI marketing site — static front end + Vercel serverless functions for the AI assistant and lead form.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}
